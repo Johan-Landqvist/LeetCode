@@ -15,11 +15,11 @@ public:
         M['M'] = 1000;
 
         for(int i = s.length(); i > 0; i--){
-            if( M[s[i]] < M[s[i-1]] ){
-                num = num + M[s[i]];
-            }
             if( M[s[i]] > M[s[i-1]] ){
-                num = num - M[s[i-1]];
+                num = num - M[s[i]];
+            }
+            else{
+                num = num + M[s[i]];
             }
         }
     return num;
